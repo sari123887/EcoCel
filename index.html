@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCel | Intercambia, repara y reutiliza</title>
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      background: #f2f6ef;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #236638;
+      color: white;
+      text-align: center;
+      padding: 22px 15px 25px;
+    }
+
+    header h1 {
+      margin: 0 0 18px;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 15px 12px;
+      background: #dcebd7;
+    }
+
+    nav a {
+      color: #285b36;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    nav a:hover {
+      color: #398b50;
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(1160px, 94%);
+      margin: 28px auto;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px;
+      margin-bottom: 28px;
+      scroll-margin-top: 85px;
+    }
+
+    h2 {
+      color: #28663b;
+      font-size: 29px;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      color: #28663b;
+      font-size: 22px;
+      margin: 0 0 16px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 28px;
+      background: #32864a;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .button:hover {
+      background: #236638;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card, .info-card {
+      background: #f2f6ef;
+      border: 1px solid #d7e4d2;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .service-card p, .info-card p {
+      margin-bottom: 0;
+    }
+
+    .service-card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .info-card {
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 28px;
+      font-size: 18px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .process p {
+      margin-top: 0;
+    }
+
+    .contact p {
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: #205d32;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 18px;
+    }
+
+    footer p {
+      margin: 0 0 8px;
+    }
+
+    @media (max-width: 760px) {
+      header h1 {
+        font-size: 34px;
+      }
+
+      nav {
+        gap: 12px 18px;
+      }
+
+      nav a {
+        font-size: 15px;
+      }
+
+      main {
+        width: 94%;
+        margin-top: 18px;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card.wide {
+        grid-column: auto;
+      }
+
+      p, ul, ol {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="inicio">
+    <h1>EcoCel</h1>
+    <p>Intercambia, repara y reutiliza</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#mision-vision">Misión y visión</a>
+    <a href="#equipo">Equipo</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+
+    <section aria-labelledby="bienvenida">
+      <h2 id="bienvenida">Bienvenidos a EcoCel</h2>
+
+      <p>
+        En EcoCel ayudamos a las personas a obtener celulares
+        de mejor modelo mediante el intercambio de equipos.
+        También reparamos y reutilizamos teléfonos para darles
+        una segunda vida y cuidar el medio ambiente.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#servicios">
+          Conoce nuestros servicios
+        </a>
+
+        <a class="button" href="#proceso">
+          ¿Cómo funciona?
+        </a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <h2>Presentación de la empresa</h2>
+
+      <p>
+        EcoCel es una empresa que se dedica al intercambio,
+        reparación y reutilización de celulares. Nuestro
+        objetivo es ofrecer a las personas la oportunidad
+        de obtener un celular de mejor modelo entregando
+        su celular y una pequeña cantidad de dinero.
+      </p>
+
+      <p>
+        Los celulares que recibimos se revisan, se reparan
+        y se reacondicionan para darles una segunda vida,
+        reduciendo los residuos electrónicos y ayudando
+        al medio ambiente.
+      </p>
+
+      <p>
+        En EcoCel creemos en la tecnología responsable,
+        en el cuidado del planeta y en brindar alternativas
+        accesibles y confiables para todos.
+      </p>
+    </section>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <h3>Intercambio de celulares</h3>
+          <p>
+            Entrega tu celular actual y paga una diferencia
+            para obtener otro modelo.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Reparación de celulares</h3>
+          <p>
+            Reparamos celulares que todavía pueden tener
+            una segunda vida.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <h3>Reutilización</h3>
+          <p>
+            Reacondicionamos celulares para volver a
+            ponerlos en venta o intercambiarlos.
+          </p>
+        </article>
+
+        <article class="service-card wide">
+          <h3>Venta de celulares reacondicionados</h3>
+          <p>
+            Ofrecemos celulares revisados y reparados
+            a precios más accesibles.
+          </p>
+
+          <div class="buttons">
+            <a class="button" href="#proceso">
+              Intercambiar mi celular
+            </a>
+
+            <a class="button" href="#contacto">
+              Solicitar información
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="mision-vision">
+      <h2>Misión y visión</h2>
+
+      <div class="info-card">
+        <h3>Misión</h3>
+        <p>
+          Ofrecer celulares reacondicionados y servicios
+          de intercambio y reparación, brindando opciones
+          accesibles y fomentando la reutilización de la
+          tecnología para cuidar el medio ambiente.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Visión</h3>
+        <p>
+          Ser una empresa reconocida por promover el uso
+          responsable de la tecnología, ayudando a que más
+          personas reutilicen sus celulares y reduciendo
+          los residuos electrónicos.
+        </p>
+      </div>
+    </section>
+
+    <section id="equipo">
+      <h2>Nuestro equipo</h2>
+
+      <ul>
+        <li><strong>Sara:</strong> Gerente general.</li>
+        <li><strong>Suri:</strong> Técnica de reparación.</li>
+        <li><strong>Samantha:</strong> Encargada de intercambios.</li>
+        <li><strong>Yamil:</strong> Encargado de finanzas.</li>
+      </ul>
+    </section>
+
+    <section id="proceso" class="process">
+      <h2>¿Cómo funciona el intercambio?</h2>
+
+      <ol>
+        <li>
+          <strong>Entrega tu celular:</strong>
+          el cliente lleva su celular usado a EcoCel.
+        </li>
+
+        <li>
+          <strong>Revisamos el equipo:</strong>
+          comprobamos su estado y funcionamiento.
+        </li>
+
+        <li>
+          <strong>Calculamos su valor:</strong>
+          determinamos cuánto vale el celular entregado.
+        </li>
+
+        <li>
+          <strong>Elige otro celular:</strong>
+          el cliente escoge un modelo disponible.
+        </li>
+
+        <li>
+          <strong>Paga la diferencia:</strong>
+          si el nuevo celular cuesta más, el cliente paga
+          la cantidad restante.
+        </li>
+
+        <li>
+          <strong>Realizamos el intercambio:</strong>
+          el equipo recibido pasa a revisión para ser
+          reparado o reacondicionado.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>¿Qué hacemos con los celulares que recibimos?</h2>
+
+      <p>
+        Revisamos los celulares recibidos y buscamos reparar
+        aquellos que todavía pueden funcionar correctamente.
+        Después, los reacondicionamos para que puedan volver
+        a utilizarse.
+      </p>
+
+      <h3>1. Revisamos</h3>
+      <p>
+        Comprobamos la pantalla, batería, cámaras y botones.
+      </p>
+
+      <h3>2. Reparamos</h3>
+      <p>
+        Solucionamos las fallas que tenga el celular.
+      </p>
+
+      <h3>3. Reacondicionamos</h3>
+      <p>
+        Limpiamos el equipo y verificamos su funcionamiento.
+      </p>
+
+      <h3>4. Reutilizamos</h3>
+      <p>
+        El celular puede volver a venderse o intercambiarse.
+      </p>
+
+      <h3>¿Por qué reutilizamos celulares?</h3>
+      <p>
+        La reutilización permite aprovechar los dispositivos
+        durante más tiempo, reducir los residuos electrónicos
+        y ofrecer celulares a precios más accesibles.
+      </p>
+    </section>
+
+    <section id="contacto" class="contact">
+      <h2>Contáctanos</h2>
+
+      <p>
+        ¿Quieres intercambiar tu celular o conocer nuestros
+        servicios? Comunícate con nosotros para obtener
+        más información.
+      </p>
+
+      <p><strong>Teléfono:</strong> 55 1234 5678</p>
+      <p><strong>Correo:</strong> ecocel.contacto@gmail.com</p>
+      <p><strong>Instagram:</strong> @EcoCel_Mexico</p>
+      <p><strong>Facebook:</strong> EcoCel México</p>
+
+      <p>
+        <em>Datos de ejemplo para el proyecto escolar.</em>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EcoCel | Intercambia, repara y reutiliza</p>
+    <p>
+      Promoviendo la tecnología responsable y el cuidado
+      del planeta.
+    </p>
+  </footer>
+
+</body>
+</html>
